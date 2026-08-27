@@ -1,0 +1,23 @@
+HƯỚNG DẪN SỬ DỤNG TOOL TẠO EXCEL FANPAGE REELS v2.0
+======================================================
+
+1. CÁCH CHẠY TOOL:
+- Nhấp đúp vào file "Chay_Tool.bat" hoặc chạy lệnh "python main.py".
+
+2. CÁC TÍNH NĂNG MỚI ĐƯỢC BỔ SUNG:
+- Tùy chọn Số Page / 1 Video: Cho phép chọn từ 1 đến 3 Page trên mỗi video.
+- Lọc tên miền link bình luận: Nhập tên miền (ví dụ: danhngon.pro) để tool tự động trỏ chính xác vào link chứa tên miền đó trong file link-da-dang.txt.
+- Tự động lấy Tiêu đề từ file link-da-dang.txt hoặc làm sạch từ tên file video / tên folder.
+- Hashtag tùy chọn: Tự động chuẩn hóa dấu # hoặc để trống nếu không muốn gắn hashtag.
+- Bỏ qua video-9x16.mp4 đúng quy chuẩn.
+- Tự động xuất file page-chua-dang.txt nếu số lượng page nhiều hơn số video trong kho.
+- Ghi nhớ cấu hình đã nhập lần trước.
+
+3. CÁC ĐỊNH DẠNG EXCEL HỖ TRỢ:
+A. File Excel Thường (11 cột):
+1. STT | 2. Trang | 3. Nền tảng | 4. Loại bài | 5. Nội dung | 6. URL video/ảnh | 7. Bình luận đầu tiên | 8. Ngày đăng | 9. Giờ đăng | 10. Múi giờ | 11. Hành động
+
+B. File Excel Token (12 cột có UID):
+1. STT | 2. Trang | 3. UID | 4. Nền tảng | 5. Loại bài | 6. Nội dung | 7. URL video/ảnh | 8. Bình luận đầu tiên | 9. Ngày đăng | 10. Giờ đăng | 11. Múi giờ | 12. Hành động
+
+* Lưu ý khi chọn "File Excel Token": Có thể nhập danh sách chỉ chứa UID (mỗi dòng 1 UID) hoặc chứa cả Trang và UID (dạng "Tên | UID").
