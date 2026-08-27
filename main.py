@@ -6,17 +6,21 @@ from tkinter import messagebox
 from config_mgr import ConfigMgr
 from ui_builder import UIBuilder
 from app_controller import AppController
+from updater import check_for_updates_gui, CURRENT_VERSION
 
 class ToolTaoExcelTkApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Bộ Công Cụ Tạo Excel Fanpage Reels v2.0")
+        self.root.title(f"Bộ Công Cụ Tạo Excel Fanpage Reels v{CURRENT_VERSION}")
         self.root.geometry("700x680")
         self.root.minsize(640, 600)
         self.cfg_mgr = ConfigMgr()
         
         UIBuilder.build(self)
         self.cfg_mgr.load(self)
+        
+        # Tự động kiểm tra bản cập nhật mới ngầm khi khởi động
+        self.root.after(1000, lambda: check_for_updates_gui(self.root, silent=True))
 
     def toggle_mode(self):
         AppController.toggle_mode(self)
@@ -72,5 +76,3 @@ if __name__ == '__main__':
     root = tk.Tk()
     app = ToolTaoExcelTkApp(root)
     root.mainloop()
-
-

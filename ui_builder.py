@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import tkinter as tk
 from tkinter import ttk, filedialog
+from updater import check_for_updates_gui
 
 class UIBuilder:
     @staticmethod
@@ -108,6 +109,8 @@ class UIBuilder:
         app.btn_check = tk.Button(btn_frame, text="Kiểm Tra Dữ Liệu", font=("Segoe UI", 10), bg="#0288d1", fg="white", relief="flat", padx=15, pady=6, command=app.check_data)
         app.btn_check.pack(side=tk.LEFT, padx=(0, 10))
 
+        app.btn_update = tk.Button(btn_frame, text="⚡ Kiểm Tra Cập Nhật", font=("Segoe UI", 9), bg="#546e7a", fg="white", relief="flat", padx=10, pady=6, command=lambda: check_for_updates_gui(app.root, silent=False))
+        app.btn_update.pack(side=tk.LEFT)
+
         app.btn_start = tk.Button(btn_frame, text="🚀 TẠO FILE EXCEL", font=("Segoe UI", 10, "bold"), bg="#2e7d32", fg="white", relief="flat", padx=20, pady=6, command=app.start_generate)
         app.btn_start.pack(side=tk.RIGHT)
-
