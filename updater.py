@@ -8,7 +8,7 @@ import subprocess
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-CURRENT_VERSION = "2.0.1"
+CURRENT_VERSION = "2.0.2"
 GITHUB_REPO = "khoathoiloi/Tool_Tao_Excel_Fanpage_v2"
 
 if getattr(sys, 'frozen', False):
